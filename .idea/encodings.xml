@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/App/config" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/dht" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/humidifier" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/max31865" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/pid" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/ssd1306" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/App/ssd1306/fonts.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/ssd1306/fonts.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/ssd1306/ssd1306.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/ssd1306/ssd1306.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/App/tools" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CMakeLists.txt.bp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/stlink.cfg" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

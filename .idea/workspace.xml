@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="STM32F4xProject" targetName="STM32F4xProject.elf" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d659ef0-4535-4982-9e46-f6b24d1583d4" name="变更" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="1122" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="名称" />
+        <option value="值" />
+        <option value="描述" />
+      </list>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/App/TMC2209Uart/tmc2209Uart.c" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.1" />
+  </component>
+  <component name="ProjectId" id="2GZI1axxozolsFwVU0dGKFB3RrF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/mores/Desktop/TMC2209-UART-TEST",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "structure.view.defaults.are.configured": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject\App\max31865" />
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject" />
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject\Core\App" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject\App" />
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject\App\max31865" />
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject\Core\Inc" />
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject\Core\Src" />
+      <recent name="C:\Users\mores\CLionProjects\STM32F4xProject" />
+    </key>
+  </component>
+  <component name="RunManager" selected="OpenOCD 下载并运行.OCD STM32F4xProject">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OCD" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32F4xProject" TARGET_NAME="STM32F4xProject.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="STM32F4xProject" RUN_TARGET_NAME="STM32F4xProject.elf">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="C:\Users\mores\CLionProjects\STM32F4xProject\stlink.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+        <debugger kind="GDB" isBundled="true" />
+      </openocd>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="OpenOCD 下载并运行.OCD STM32F4xProject" />
+      <item itemvalue="OpenOCD 下载并运行.OCD" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="7d659ef0-4535-4982-9e46-f6b24d1583d4" name="变更" comment="" />
+      <created>1666589465066</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666589465066</updated>
+      <workItem from="1666589482381" duration="6207000" />
+      <workItem from="1666659413440" duration="4885000" />
+      <workItem from="1666677145873" duration="10769000" />
+      <workItem from="1666690901556" duration="2000" />
+      <workItem from="1666705535062" duration="6780000" />
+      <workItem from="1666747981660" duration="3543000" />
+      <workItem from="1666762981093" duration="18648000" />
+      <workItem from="1666851983455" duration="19211000" />
+      <workItem from="1667175588965" duration="10761000" />
+      <workItem from="1667264100155" duration="11829000" />
+      <workItem from="1667441947229" duration="4203000" />
+      <workItem from="1667524609154" duration="8869000" />
+      <workItem from="1667800669401" duration="36356000" />
+      <workItem from="1668042874158" duration="3345000" />
+      <workItem from="1668059815829" duration="23705000" />
+      <workItem from="1668234383979" duration="16733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
