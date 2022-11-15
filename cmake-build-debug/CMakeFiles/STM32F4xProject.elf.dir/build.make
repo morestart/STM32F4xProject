@@ -68,24 +68,38 @@ include CMakeFiles/STM32F4xProject.elf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/STM32F4xProject.elf.dir/flags.make
 
-CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
-CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj: ../App/TMC2209Uart/tmc2209Uart.c
-CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj: CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj"
-	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj -MF CMakeFiles\STM32F4xProject.elf.dir\App\TMC2209Uart\tmc2209Uart.c.obj.d -o CMakeFiles\STM32F4xProject.elf.dir\App\TMC2209Uart\tmc2209Uart.c.obj -c C:\Users\mores\CLionProjects\STM32F4xProject\App\TMC2209Uart\tmc2209Uart.c
+CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
+CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj: ../App/TMC220xUart/tmc220xUart.c
+CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj: CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj"
+	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj -MF CMakeFiles\STM32F4xProject.elf.dir\App\TMC220xUart\tmc220xUart.c.obj.d -o CMakeFiles\STM32F4xProject.elf.dir\App\TMC220xUart\tmc220xUart.c.obj -c C:\Users\mores\CLionProjects\STM32F4xProject\App\TMC220xUart\tmc220xUart.c
 
-CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.i"
-	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mores\CLionProjects\STM32F4xProject\App\TMC2209Uart\tmc2209Uart.c > CMakeFiles\STM32F4xProject.elf.dir\App\TMC2209Uart\tmc2209Uart.c.i
+CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.i"
+	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mores\CLionProjects\STM32F4xProject\App\TMC220xUart\tmc220xUart.c > CMakeFiles\STM32F4xProject.elf.dir\App\TMC220xUart\tmc220xUart.c.i
 
-CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.s"
-	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mores\CLionProjects\STM32F4xProject\App\TMC2209Uart\tmc2209Uart.c -o CMakeFiles\STM32F4xProject.elf.dir\App\TMC2209Uart\tmc2209Uart.c.s
+CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.s"
+	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mores\CLionProjects\STM32F4xProject\App\TMC220xUart\tmc220xUart.c -o CMakeFiles\STM32F4xProject.elf.dir\App\TMC220xUart\tmc220xUart.c.s
+
+CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
+CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj: ../App/dht/dht.c
+CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj: CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj"
+	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj -MF CMakeFiles\STM32F4xProject.elf.dir\App\dht\dht.c.obj.d -o CMakeFiles\STM32F4xProject.elf.dir\App\dht\dht.c.obj -c C:\Users\mores\CLionProjects\STM32F4xProject\App\dht\dht.c
+
+CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.i"
+	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mores\CLionProjects\STM32F4xProject\App\dht\dht.c > CMakeFiles\STM32F4xProject.elf.dir\App\dht\dht.c.i
+
+CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.s"
+	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mores\CLionProjects\STM32F4xProject\App\dht\dht.c -o CMakeFiles\STM32F4xProject.elf.dir\App\dht\dht.c.s
 
 CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
 CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj: ../App/humidifier/humidifier.c
 CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj: CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj"
 	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj -MF CMakeFiles\STM32F4xProject.elf.dir\App\humidifier\humidifier.c.obj.d -o CMakeFiles\STM32F4xProject.elf.dir\App\humidifier\humidifier.c.obj -c C:\Users\mores\CLionProjects\STM32F4xProject\App\humidifier\humidifier.c
 
 CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.i: cmake_force
@@ -99,7 +113,7 @@ CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.s: cmake_force
 CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
 CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj: ../App/max31865/max31865.c
 CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj: CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj"
 	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj -MF CMakeFiles\STM32F4xProject.elf.dir\App\max31865\max31865.c.obj.d -o CMakeFiles\STM32F4xProject.elf.dir\App\max31865\max31865.c.obj -c C:\Users\mores\CLionProjects\STM32F4xProject\App\max31865\max31865.c
 
 CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.i: cmake_force
@@ -109,20 +123,6 @@ CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.i: cmake_force
 CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.s"
 	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mores\CLionProjects\STM32F4xProject\App\max31865\max31865.c -o CMakeFiles\STM32F4xProject.elf.dir\App\max31865\max31865.c.s
-
-CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
-CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj: ../App/motor/motor.c
-CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj: CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mores\CLionProjects\STM32F4xProject\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj"
-	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj -MF CMakeFiles\STM32F4xProject.elf.dir\App\motor\motor.c.obj.d -o CMakeFiles\STM32F4xProject.elf.dir\App\motor\motor.c.obj -c C:\Users\mores\CLionProjects\STM32F4xProject\App\motor\motor.c
-
-CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.i"
-	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mores\CLionProjects\STM32F4xProject\App\motor\motor.c > CMakeFiles\STM32F4xProject.elf.dir\App\motor\motor.c.i
-
-CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.s"
-	D:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mores\CLionProjects\STM32F4xProject\App\motor\motor.c -o CMakeFiles\STM32F4xProject.elf.dir\App\motor\motor.c.s
 
 CMakeFiles/STM32F4xProject.elf.dir/App/tools/tools.c.obj: CMakeFiles/STM32F4xProject.elf.dir/flags.make
 CMakeFiles/STM32F4xProject.elf.dir/App/tools/tools.c.obj: ../App/tools/tools.c
@@ -503,10 +503,10 @@ CMakeFiles/STM32F4xProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ha
 
 # Object files for target STM32F4xProject.elf
 STM32F4xProject_elf_OBJECTS = \
-"CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj" \
+"CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj" \
+"CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj" \
 "CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj" \
 "CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj" \
-"CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj" \
 "CMakeFiles/STM32F4xProject.elf.dir/App/tools/tools.c.obj" \
 "CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj" \
 "CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj" \
@@ -538,10 +538,10 @@ STM32F4xProject_elf_OBJECTS = \
 # External object files for target STM32F4xProject.elf
 STM32F4xProject_elf_EXTERNAL_OBJECTS =
 
-STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj
+STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj
+STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj
 STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj
 STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj
-STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj
 STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/App/tools/tools.c.obj
 STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj
 STM32F4xProject.elf: CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj

@@ -48,11 +48,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(${includes} App/motor App/tools App/humidifier App/max31865 App/TMC2209Uart)
+include_directories(${includes} App/motor App/tools App/humidifier App/max31865 App/TMC220xUart App/dht)
 
 add_definitions(${defines})
 
-file(GLOB_RECURSE SOURCES ${sources} App/motor/*.* App/tools/*.* App/humidifier/*.* App/max31865/*.* App/TMC2209Uart/*.*)
+file(GLOB_RECURSE SOURCES ${sources} App/motor/*.* App/tools/*.* App/humidifier/*.* App/max31865/*.* App/TMC220xUart/*.* App/dht/*.*)
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})
 

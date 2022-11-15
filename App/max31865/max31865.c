@@ -2,8 +2,8 @@
 
 
 /*********************** Global variables *************************/
-MAX31865_GPIO *gpio;
 
+MAX31865_GPIO max31865GPIO;
 
 /*********************** Begin Private functions *************************/
 /**
@@ -12,17 +12,14 @@ MAX31865_GPIO *gpio;
  * @param data Pointer to transmit buffer
  * @param len  Amount of bytest to send
  */
-void spi_write(uint8_t *data, uint8_t len)
-{
-	for (uint8_t x = 0; x < len; x++)
-	{
-		for (int8_t i = 7; i >= 0; i--)
-		{
-			HAL_GPIO_WritePin(gpio->MOSI_PORT, gpio->MOSI_PIN, (data[x] & (1 << i)));
+void spi_write(uint8_t *data, uint8_t len) {
+	for (uint8_t x = 0; x < len; x++) {
+		for (int8_t i = 7; i >= 0; i--) {
+			HAL_GPIO_WritePin(max31865GPIO.MOSI_PORT, max31865GPIO.MOSI_PIN, (data[x] & (1 << i)));
 			DELAY(1);
-			HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 1);
+			HAL_GPIO_WritePin(max31865GPIO.CLK_PORT, max31865GPIO.CLK_PIN, 1);
 			DELAY(1);
-			HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 0);
+			HAL_GPIO_WritePin(max31865GPIO.CLK_PORT, max31865GPIO.CLK_PIN, 0);
 		}
 	}
 
@@ -34,20 +31,17 @@ void spi_write(uint8_t *data, uint8_t len)
  * @param buffer Pointer to rx buffer
  * @param len Amount of bytes to receive
  */
-void spi_read(uint8_t *buffer, uint8_t len)
-{
-	for (uint8_t x = 0; x < len; x++)
-	{
+void spi_read(uint8_t *buffer, uint8_t len) {
+	for (uint8_t x = 0; x < len; x++) {
 		buffer[x] = 0;
 
-		for (int8_t i = 7; i >= 0; i--)
-		{
+		for (int8_t i = 7; i >= 0; i--) {
 			buffer[x] <<= 1;
-			HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 1);
+			HAL_GPIO_WritePin(max31865GPIO.CLK_PORT, max31865GPIO.CLK_PIN, 1);
 			DELAY(1);
-			buffer[x] |= HAL_GPIO_ReadPin(gpio->MISO_PORT, gpio->MISO_PIN);
+			buffer[x] |= HAL_GPIO_ReadPin(max31865GPIO.MISO_PORT, max31865GPIO.MISO_PIN);
 			DELAY(1);
-			HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 0);
+			HAL_GPIO_WritePin(max31865GPIO.CLK_PORT, max31865GPIO.CLK_PIN, 0);
 		}
 	}
 }
@@ -59,16 +53,15 @@ void spi_read(uint8_t *buffer, uint8_t len)
  * @param buffer    Pointer to rx buffer
  * @param len       Amount of bytes to read
  */
-void MAX31865_read(uint8_t addr, uint8_t *buffer, uint8_t len)
-{
+void MAX31865_read(uint8_t addr, uint8_t *buffer, uint8_t len) {
 	addr &= ~MAX31865_READ;                                     // Force read bit on address
 
-	HAL_GPIO_WritePin(gpio->CE_PORT, gpio->CE_PIN, 0);          // Enable CE
+	HAL_GPIO_WritePin(max31865GPIO.CE_PORT, max31865GPIO.CE_PIN, 0);          // Enable CE
 
 	spi_write(&addr, 1);                                        // Write addr
 	spi_read(buffer, len);                                      // Read data
 
-	HAL_GPIO_WritePin(gpio->CE_PORT, gpio->CE_PIN, 1);          // Disable CE
+	HAL_GPIO_WritePin(max31865GPIO.CE_PORT, max31865GPIO.CE_PIN, 1);          // Disable CE
 }
 
 /**
@@ -77,32 +70,28 @@ void MAX31865_read(uint8_t addr, uint8_t *buffer, uint8_t len)
  * @param addr      Register addr to write to
  * @param buffer    Tx data
  */
-void MAX31865_write(uint8_t addr, uint8_t data)
-{
+void MAX31865_write(uint8_t addr, uint8_t data) {
 	addr |= MAX31865_WRITE;                                 // Force write bit on address
 
-	HAL_GPIO_WritePin(gpio->CE_PORT, gpio->CE_PIN, 0);      // Enable CE
+	HAL_GPIO_WritePin(max31865GPIO.CE_PORT, max31865GPIO.CE_PIN, 0);      // Enable CE
 
 	spi_write(&addr, 1);                                    // Write addr
 	spi_write(&data, 1);                                    // Write data
 
-	HAL_GPIO_WritePin(gpio->CE_PORT, gpio->CE_PIN, 1);      // Disable CE
+	HAL_GPIO_WritePin(max31865GPIO.CE_PORT, max31865GPIO.CE_PIN, 1);      // Disable CE
 }
 
 /**
  * Enable of disable MAX831865 bias voltage
  * @param enable Enable of disable
  */
-void enableBias(uint8_t enable)
-{
+void enableBias(uint8_t enable) {
 	uint8_t status;
 	MAX31865_read(MAX31856_CONFIG_REG, &status, 1);
 
-	if (enable)
-	{
+	if (enable) {
 		status |= MAX31856_CONFIG_BIAS;
-	} else
-	{
+	} else {
 		status &= ~MAX31856_CONFIG_BIAS;
 	}
 
@@ -113,16 +102,13 @@ void enableBias(uint8_t enable)
  * Enable of disable MAX831865 auto convert
  * @param enable Enable of disable
  */
-void autoConvert(uint8_t enable)
-{
+void autoConvert(uint8_t enable) {
 	uint8_t status;
 	MAX31865_read(MAX31856_CONFIG_REG, &status, 1);
 
-	if (enable)
-	{
+	if (enable) {
 		status |= MAX31856_CONFIG_MODEAUTO;
-	} else
-	{
+	} else {
 		status &= ~MAX31856_CONFIG_MODEAUTO;
 	}
 
@@ -133,8 +119,7 @@ void autoConvert(uint8_t enable)
  * Set the amount of wires the temperature sensor uses
  * @param numwires 2,3 or 4 wires
  */
-void setWires(uint8_t numwires)
-{
+void setWires(uint8_t numwires) {
 	uint8_t status;
 	MAX31865_read(MAX31856_CONFIG_REG, &status, 1);
 
@@ -152,8 +137,7 @@ void setWires(uint8_t numwires)
 /**
  * Perform a single shot conversion
  */
-void single_shot(void)
-{
+void single_shot(void) {
 	uint8_t status;
 
 	// Read config register
@@ -168,21 +152,41 @@ void single_shot(void)
 
 
 /*********************** Begin Public functions *************************/
-
-/**
+/*!
  * Initialise MAX31865 for single shot temperature conversion
- *
- * @param max_gpio  MAX31865_GPIO structure with pinout
- * @param wires     Amount of wires on the temperature probe (2,3 or 4)
+ * @param CS_PORT
+ * @param CS_PIN
+ * @param CLK_PORT
+ * @param CLK_PIN
+ * @param MOSI_PORT
+ * @param MOSI_PIN
+ * @param MISO_PORT
+ * @param MISO_PIN
+ * @param wires Amount of wires on the temperature probe (2,3 or 4)
  */
-void MAX31865_init(MAX31865_GPIO *max_gpio, uint8_t wires)
-{
-	gpio = max_gpio;
+void initMax31865(GPIO_TypeDef *CS_PORT,
+                  uint16_t CS_PIN,
+                  GPIO_TypeDef *CLK_PORT,
+                  uint16_t CLK_PIN,
+                  GPIO_TypeDef *MOSI_PORT,
+                  uint16_t MOSI_PIN,
+                  GPIO_TypeDef *MISO_PORT,
+                  uint16_t MISO_PIN,
+                  uint8_t wires) {
+
+	max31865GPIO.CE_PORT = CS_PORT;
+	max31865GPIO.CE_PIN = CS_PIN;
+	max31865GPIO.CLK_PORT = CLK_PORT;
+	max31865GPIO.CLK_PIN = CLK_PIN;
+	max31865GPIO.MOSI_PORT = MOSI_PORT;
+	max31865GPIO.MOSI_PIN = MOSI_PIN;
+	max31865GPIO.MISO_PORT = MISO_PORT;
+	max31865GPIO.MISO_PIN = MISO_PIN;
 
 	// Datalines in reset state
-	HAL_GPIO_WritePin(gpio->CE_PORT, gpio->CE_PIN, 1);
-	HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 1);
-	HAL_GPIO_WritePin(gpio->MOSI_PORT, gpio->MOSI_PIN, 1);
+	HAL_GPIO_WritePin(max31865GPIO.CE_PORT, max31865GPIO.CE_PIN, 1);
+	HAL_GPIO_WritePin(max31865GPIO.CLK_PORT, max31865GPIO.CLK_PIN, 1);
+	HAL_GPIO_WritePin(max31865GPIO.MOSI_PORT, max31865GPIO.MOSI_PIN, 1);
 
 	setWires(wires);           // Set 2,3 or 4 wire sensor
 	enableBias(OFF);           // Disable bias voltage
@@ -194,8 +198,7 @@ void MAX31865_init(MAX31865_GPIO *max_gpio, uint8_t wires)
  *
  * @return  Temperature as float
  */
-float MAX31865_readTemp()
-{
+double max31865ReadTemp() {
 	// Activate bias voltage to read sensor data, and wait for the capacitors to fill
 	enableBias(ON);
 	HAL_Delay(10);
@@ -217,7 +220,7 @@ float MAX31865_readTemp()
 	float resistance = ((float) data * RREF) / FACTOR;
 
 	// Calculate the temperature from the measured resistance
-	float temp = ((resistance / 100) - 1) / ALPHA;
+	double temp = ((resistance / 100) - 1) / ALPHA;
 
 	// Disable bias voltage to reduce power usage
 	enableBias(OFF);

@@ -1,7 +1,7 @@
 //
 // Created by mores on 2022/10/25.
 //
-#include "motor.h"
+#include "tmc220x.h"
 #include "stm32f4xx_hal.h"
 #include "tools.h"
 

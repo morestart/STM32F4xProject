@@ -2,8 +2,8 @@
 // Created by mores on 2022/10/25.
 //
 
-#ifndef MOTOR_H
-#define MOTOR_H
+#ifndef TMC220X_H
+#define TMC220X_H
 
 #include "stm32f407xx.h"
 
@@ -44,4 +44,4 @@ void moveTo(uint8_t DIR_Flag, uint32_t moveDistance);
 
 void disableMotor();
 
-#endif //MOTOR_H
+#endif //TMC220X_H

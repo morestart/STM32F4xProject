@@ -36,7 +36,8 @@
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/tools"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/humidifier"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/max31865"/>
-					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC2209Uart"/>
+					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart"/>
+					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
@@ -70,7 +71,8 @@
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/tools"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/humidifier"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/max31865"/>
-					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC2209Uart"/>
+					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart"/>
+					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
@@ -106,10 +108,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC2209Uart/tmc2209Uart.c">
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart/README.md">
 			<Option target="STM32F4xProject.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC2209Uart/tmc2209Uart.h">
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart/tmc220xUart.c">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart/tmc220xUart.h">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht/README.md">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht/dht.c">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht/dht.h">
 			<Option target="STM32F4xProject.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/humidifier/README.md">
@@ -128,15 +142,6 @@
 			<Option target="STM32F4xProject.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/max31865/max31865.h">
-			<Option target="STM32F4xProject.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/motor/README.md">
-			<Option target="STM32F4xProject.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/motor/motor.c">
-			<Option target="STM32F4xProject.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/motor/motor.h">
 			<Option target="STM32F4xProject.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/tools/README.md">

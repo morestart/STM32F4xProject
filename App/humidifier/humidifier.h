@@ -15,7 +15,8 @@ typedef struct {
 	uint16_t humidifier_GPIO_PIN;
 } humidifier;
 
-void initHumidifier(humidifier *customHumidifier);
+void initHumidifier(GPIO_TypeDef *humidifier_Port,
+                    uint16_t humidifier_GPIO_PIN);
 
 void openHumidifier();
 

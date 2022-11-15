@@ -21,7 +21,7 @@ int main(void) {
   while(1) {
 
     if (sendFlag) {
-        float temp = MAX31865_readTemp();
+        float temp = max31865ReadTemp();
         print("%f\r\n", temp);
         sendFlag = 0;
     }

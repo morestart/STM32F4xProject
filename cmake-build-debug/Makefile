@@ -128,29 +128,53 @@ STM32F4xProject.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/build
 .PHONY : STM32F4xProject.elf/fast
 
-App/TMC2209Uart/tmc2209Uart.obj: App/TMC2209Uart/tmc2209Uart.c.obj
-.PHONY : App/TMC2209Uart/tmc2209Uart.obj
+App/TMC220xUart/tmc220xUart.obj: App/TMC220xUart/tmc220xUart.c.obj
+.PHONY : App/TMC220xUart/tmc220xUart.obj
 
 # target to build an object file
-App/TMC2209Uart/tmc2209Uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj
-.PHONY : App/TMC2209Uart/tmc2209Uart.c.obj
+App/TMC220xUart/tmc220xUart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj
+.PHONY : App/TMC220xUart/tmc220xUart.c.obj
 
-App/TMC2209Uart/tmc2209Uart.i: App/TMC2209Uart/tmc2209Uart.c.i
-.PHONY : App/TMC2209Uart/tmc2209Uart.i
+App/TMC220xUart/tmc220xUart.i: App/TMC220xUart/tmc220xUart.c.i
+.PHONY : App/TMC220xUart/tmc220xUart.i
 
 # target to preprocess a source file
-App/TMC2209Uart/tmc2209Uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.i
-.PHONY : App/TMC2209Uart/tmc2209Uart.c.i
+App/TMC220xUart/tmc220xUart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.i
+.PHONY : App/TMC220xUart/tmc220xUart.c.i
 
-App/TMC2209Uart/tmc2209Uart.s: App/TMC2209Uart/tmc2209Uart.c.s
-.PHONY : App/TMC2209Uart/tmc2209Uart.s
+App/TMC220xUart/tmc220xUart.s: App/TMC220xUart/tmc220xUart.c.s
+.PHONY : App/TMC220xUart/tmc220xUart.s
 
 # target to generate assembly for a file
-App/TMC2209Uart/tmc2209Uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.s
-.PHONY : App/TMC2209Uart/tmc2209Uart.c.s
+App/TMC220xUart/tmc220xUart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.s
+.PHONY : App/TMC220xUart/tmc220xUart.c.s
+
+App/dht/dht.obj: App/dht/dht.c.obj
+.PHONY : App/dht/dht.obj
+
+# target to build an object file
+App/dht/dht.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj
+.PHONY : App/dht/dht.c.obj
+
+App/dht/dht.i: App/dht/dht.c.i
+.PHONY : App/dht/dht.i
+
+# target to preprocess a source file
+App/dht/dht.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.i
+.PHONY : App/dht/dht.c.i
+
+App/dht/dht.s: App/dht/dht.c.s
+.PHONY : App/dht/dht.s
+
+# target to generate assembly for a file
+App/dht/dht.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.s
+.PHONY : App/dht/dht.c.s
 
 App/humidifier/humidifier.obj: App/humidifier/humidifier.c.obj
 .PHONY : App/humidifier/humidifier.obj
@@ -199,30 +223,6 @@ App/max31865/max31865.s: App/max31865/max31865.c.s
 App/max31865/max31865.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.s
 .PHONY : App/max31865/max31865.c.s
-
-App/motor/motor.obj: App/motor/motor.c.obj
-.PHONY : App/motor/motor.obj
-
-# target to build an object file
-App/motor/motor.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj
-.PHONY : App/motor/motor.c.obj
-
-App/motor/motor.i: App/motor/motor.c.i
-.PHONY : App/motor/motor.i
-
-# target to preprocess a source file
-App/motor/motor.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.i
-.PHONY : App/motor/motor.c.i
-
-App/motor/motor.s: App/motor/motor.c.s
-.PHONY : App/motor/motor.s
-
-# target to generate assembly for a file
-App/motor/motor.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.s
-.PHONY : App/motor/motor.c.s
 
 App/tools/tools.obj: App/tools/tools.c.obj
 .PHONY : App/tools/tools.obj
@@ -865,18 +865,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... STM32F4xProject.elf
-	@echo ... App/TMC2209Uart/tmc2209Uart.obj
-	@echo ... App/TMC2209Uart/tmc2209Uart.i
-	@echo ... App/TMC2209Uart/tmc2209Uart.s
+	@echo ... App/TMC220xUart/tmc220xUart.obj
+	@echo ... App/TMC220xUart/tmc220xUart.i
+	@echo ... App/TMC220xUart/tmc220xUart.s
+	@echo ... App/dht/dht.obj
+	@echo ... App/dht/dht.i
+	@echo ... App/dht/dht.s
 	@echo ... App/humidifier/humidifier.obj
 	@echo ... App/humidifier/humidifier.i
 	@echo ... App/humidifier/humidifier.s
 	@echo ... App/max31865/max31865.obj
 	@echo ... App/max31865/max31865.i
 	@echo ... App/max31865/max31865.s
-	@echo ... App/motor/motor.obj
-	@echo ... App/motor/motor.i
-	@echo ... App/motor/motor.s
 	@echo ... App/tools/tools.obj
 	@echo ... App/tools/tools.i
 	@echo ... App/tools/tools.s

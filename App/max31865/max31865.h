@@ -50,8 +50,16 @@ typedef struct {
 
 
 /********************* Public functions *********************/
-float MAX31865_readTemp();
+double max31865ReadTemp();
 
-void MAX31865_init(MAX31865_GPIO *max_gpio, uint8_t wires);
+void initMax31865(GPIO_TypeDef *CS_PORT,
+                  uint16_t CS_PIN,
+                  GPIO_TypeDef *CLK_PORT,
+                  uint16_t CLK_PIN,
+                  GPIO_TypeDef *MOSI_PORT,
+                  uint16_t MOSI_PIN,
+                  GPIO_TypeDef *MISO_PORT,
+                  uint16_t MISO_PIN,
+                  uint8_t wires);
 
 #endif //MAX31865_LIB_MAX31865_H

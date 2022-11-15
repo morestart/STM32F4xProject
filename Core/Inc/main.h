@@ -57,8 +57,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define DIR_Pin GPIO_PIN_4
-#define DIR_GPIO_Port GPIOA
 #define EN_Pin GPIO_PIN_5
 #define EN_GPIO_Port GPIOA
 #define STEP_Pin GPIO_PIN_6
@@ -74,10 +72,6 @@ void Error_Handler(void);
 #define SDO_GPIO_Port GPIOE
 #define CLK_Pin GPIO_PIN_15
 #define CLK_GPIO_Port GPIOE
-#define MS1_Pin GPIO_PIN_8
-#define MS1_GPIO_Port GPIOA
-#define MS2_Pin GPIO_PIN_9
-#define MS2_GPIO_Port GPIOA
 #define Humidifier_Pin GPIO_PIN_12
 #define Humidifier_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */

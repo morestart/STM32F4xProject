@@ -30,15 +30,16 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../App/tools"
   "../App/humidifier"
   "../App/max31865"
-  "../App/TMC2209Uart"
+  "../App/TMC220xUart"
+  "../App/dht"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC2209Uart/tmc2209Uart.c" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj.d"
+  "C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart/tmc220xUart.c" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj.d"
+  "C:/Users/mores/CLionProjects/STM32F4xProject/App/dht/dht.c" "CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/App/humidifier/humidifier.c" "CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/App/max31865/max31865.c" "CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj.d"
-  "C:/Users/mores/CLionProjects/STM32F4xProject/App/motor/motor.c" "CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/App/tools/tools.c" "CMakeFiles/STM32F4xProject.elf.dir/App/tools/tools.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/tools/tools.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/Core/Src/gpio.c" "CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/Core/Src/main.c" "CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj.d"

@@ -25,11 +25,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "tools.h"
-#include "motor.h"
+#include "tmc220xUart.h"
 #include "humidifier.h"
 #include "max31865.h"
 #include "tim.h"
-#include "tmc2209Uart.h"
+#include "tmc220xUart.h"
+#include "max31865.h"
+#include "dht.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,65 +96,40 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM6_Init();
   MX_TIM7_Init();
-  MX_USART3_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	// 初始化串口
-	RetargetInit(&huart6);
-	// 初始化延时
-	delay_init(168);
-	// 初始化步进电机
+	/*=========================驱动初始化========================= */
+	// 初始化步进电机驱动
+	initTMC2209(
+		0,&huart2, 64, 203, 2,
+		STEP_GPIO_Port, STEP_Pin,
+		EN_GPIO_Port, EN_Pin,
+		DIAG_GPIO_Port, DIAG_Pin, 80, 0
+	);
 
-	initTMC2209(&huart2,64,203,2,
-							STEP_GPIO_Port, STEP_Pin,
-							EN_GPIO_Port, EN_Pin);
-//	MOTOR motor = {2, 64, 203, 1.8,
-//	               STEP_GPIO_Port, STEP_Pin,
-//	               DIR_GPIO_Port, DIR_Pin,
-//	               EN_GPIO_Port, EN_Pin,
-//	               MS1_GPIO_Port, MS1_Pin,
-//	               MS2_GPIO_Port, MS2_Pin
-//	};
-//	initMotorSubDivision(&motor);
+	// 初始化加湿器
+	initHumidifier(Humidifier_GPIO_Port, Humidifier_Pin);
+	// 初始化Max31865温度传感器
+	initMax31865(CS_GPIO_Port, CS_Pin, CLK_GPIO_Port, CLK_Pin,
+	             SDI_GPIO_Port, SDI_Pin, SDO_GPIO_Port, SDO_Pin, 4);
+	static DHT_sensor dhtSensor = {GPIOC, GPIO_PIN_1, DHT22, GPIO_PULLUP};
 
-////	// 初始化Max31865 设置4线
-//	MAX31865_GPIO max_gpio;
-//	max_gpio.MISO_PIN = SDO_Pin;
-//	max_gpio.MISO_PORT = SDO_GPIO_Port;
-//	max_gpio.MOSI_PIN = SDI_Pin;
-//	max_gpio.MOSI_PORT = SDI_GPIO_Port;
-//	max_gpio.CLK_PIN = CLK_Pin;
-//	max_gpio.CLK_PORT = CLK_GPIO_Port;
-//	max_gpio.CE_PIN = CS_Pin;
-//	max_gpio.CE_PORT = CS_GPIO_Port;
-//	MAX31865_init(&max_gpio, 4);
-//	// 打开发送传感器数据定时器中断
-//	HAL_TIM_Base_Start_IT(&htim7);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1) {
-//		moveToUART(1, 5);
-//		HAL_Delay(3000);
-//		moveToUART(0, 5);
-//		HAL_Delay(3000);
-//		char chaxun[4] = {0x05, 0x00, 0x00, 0x48};
-//		HAL_UART_Transmit(&huart2, chaxun, 4, 0xff);
-//		uint8_t send[4] = {0x05, 0x00, 0x41, 0xCF};
-//		uint8_t send1[4] = {0x05, 0x00, 0x06, 0x6F};
-////		HAL_UART_Transmit(&huart2, send, 4, 0xff);
-//		HAL_UART_Transmit(&huart2, send1, 4, 0xff);
-
-		while (stop) {
+		moveToUART(0,1, 5);
+		HAL_Delay(1000);
+		moveToUART(0,0, 5);
+		HAL_Delay(1000);
+		if (sendFlag) {
+			DHT_data dhtData = DHT_getData(&dhtSensor);
+			double temp = max31865ReadTemp();
+			sendFlag = 0;
 		}
-
-
-		moveToUART(1, 5);
-		HAL_Delay(1000);
-		moveToUART(0, 5);
-		HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

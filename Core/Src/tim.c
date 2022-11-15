@@ -24,12 +24,11 @@
 #include "tools.h"
 #include "humidifier.h"
 #include "usart.h"
-#include "motor.h"
 
 uint8_t openHumCount;
 uint8_t closeHumCount;
 uint8_t runFlag;
-uint8_t sendFlag = 0;
+uint8_t sendFlag;
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim6;
@@ -176,15 +175,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 		if (runFlag) {
 			openHumCount++;
 			openHumidifier();
-			print("open count: %d", openHumCount);
-
+//			print("open count: %d", openHumCount);
 			if (openHumCount > needRunHumidifierTime) {
 				runFlag = 0;
 				openHumCount = 0;
 			}
 		} else if (needStopHumidifierTime) {
 			closeHumCount++;
-			print("close count: %d", closeHumCount);
+//			print("close count: %d", closeHumCount);
 			closeHumidifier();
 			if (closeHumCount > needStopHumidifierTime) {
 				runFlag = 1;
