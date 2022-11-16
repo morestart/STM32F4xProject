@@ -30,6 +30,8 @@ typedef struct {
 	uint16_t DIAG_GPIO_Pin;
 
 	uint8_t stop;
+
+	uint8_t ZERO_flag;
 } TMC2209;
 
 
@@ -102,8 +104,10 @@ typedef struct {
 //uint8_t sgthrs = 255 << 0;
 
 #define TMC220X_NUM 2
+#define TMC_acc  100
+#define TMC_len  100
 
-void moveStepUart(uint8_t num,uint64_t Step);
+//void moveStepUart(uint8_t num,uint64_t Step);
 
 void moveToUART(uint8_t num,uint8_t DIR_Flag, uint32_t moveDistance);
 
@@ -116,6 +120,14 @@ void initTMC2209(uint8_t num,UART_HandleTypeDef *uart, uint8_t mres,
 void stopMotor(uint8_t num);
 
 void TMC220X_Callback(uint16_t GPIO_Pin);
+
+void stallGuard(uint8_t num,uint32_t threshold);
+
+//void setMicrosteppingResolution(uint8_t num,uint8_t mres);
+
+void set_stop_flag(uint8_t num,uint8_t flag);
+
+uint8_t get_stop_flag(uint8_t num);
 
 //extern uint8_t stop;
 //extern TMC2209 tmc2209[];

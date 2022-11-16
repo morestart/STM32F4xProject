@@ -32,10 +32,12 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../App/max31865"
   "../App/TMC220xUart"
   "../App/dht"
+  "../APP/TMC220x"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220x/tmc220x.c" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart/tmc220xUart.c" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/App/dht/dht.c" "CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj.d"
   "C:/Users/mores/CLionProjects/STM32F4xProject/App/humidifier/humidifier.c" "CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj" "gcc" "CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj.d"

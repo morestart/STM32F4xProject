@@ -38,6 +38,7 @@
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/max31865"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht"/>
+					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/APP/TMC220x"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
@@ -73,6 +74,7 @@
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/max31865"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart"/>
 					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/App/dht"/>
+					<Add directory="C:/Users/mores/CLionProjects/STM32F4xProject/APP/TMC220x"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
 					<Add directory="d:\stm32\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
@@ -108,6 +110,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220x/README.md">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220x/tmc220x.c">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220x/tmc220x.h">
+			<Option target="STM32F4xProject.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/mores/CLionProjects/STM32F4xProject/App/TMC220xUart/README.md">
 			<Option target="STM32F4xProject.elf"/>
 		</Unit>

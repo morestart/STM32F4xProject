@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.obj"
+  "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.obj.d"
   "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj"
   "CMakeFiles/STM32F4xProject.elf.dir/App/TMC220xUart/tmc220xUart.c.obj.d"
   "CMakeFiles/STM32F4xProject.elf.dir/App/dht/dht.c.obj"

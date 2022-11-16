@@ -32,6 +32,7 @@
 #include "tmc220xUart.h"
 #include "max31865.h"
 #include "dht.h"
+#include "tmc220x.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,39 +98,51 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM7_Init();
   MX_USART2_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	delay_init(168);
 	/*=========================驱动初始化========================= */
 	// 初始化步进电机驱动
+	RetargetInit(&huart6);
 	initTMC2209(
-		0,&huart2, 64, 203, 2,
-		STEP_GPIO_Port, STEP_Pin,
-		EN_GPIO_Port, EN_Pin,
-		DIAG_GPIO_Port, DIAG_Pin, 80, 0
+		0, &huart2, 64, 203, 2,
+		STEP1_GPIO_Port, STEP1_Pin,
+		EN1_GPIO_Port, EN1_Pin,
+		DIAG2_GPIO_Port, DIAG2_Pin, 80, 1
 	);
+//
+//	initTMC2209(1, &huart3, 64, 203, 2, STEP2_GPIO_Port,
+//							STEP2_Pin, EN2_GPIO_Port, EN2_Pin, DIAG1_GPIO_Port,
+//							DIAG1_Pin, 80, 0);
 
 	// 初始化加湿器
-	initHumidifier(Humidifier_GPIO_Port, Humidifier_Pin);
+//	initHumidifier(Humidifier_GPIO_Port, Humidifier_Pin);
 	// 初始化Max31865温度传感器
-	initMax31865(CS_GPIO_Port, CS_Pin, CLK_GPIO_Port, CLK_Pin,
-	             SDI_GPIO_Port, SDI_Pin, SDO_GPIO_Port, SDO_Pin, 4);
-	static DHT_sensor dhtSensor = {GPIOC, GPIO_PIN_1, DHT22, GPIO_PULLUP};
+//	initMax31865(0, CS_GPIO_Port, CS_Pin, CLK_GPIO_Port, CLK_Pin,
+//	             SDI_GPIO_Port, SDI_Pin, SDO_GPIO_Port, SDO_Pin, 4);
+//	static DHT_sensor dhtSensor = {GPIOC, GPIO_PIN_1, DHT22, GPIO_PULLUP};
 
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	stallGuard(0,0);
 	while (1) {
-		moveToUART(0,1, 5);
-		HAL_Delay(1000);
-		moveToUART(0,0, 5);
-		HAL_Delay(1000);
-		if (sendFlag) {
-			DHT_data dhtData = DHT_getData(&dhtSensor);
-			double temp = max31865ReadTemp();
-			sendFlag = 0;
+		static uint8_t dir=0;
+		moveToUART(0, dir, 200);
+		if(get_stop_flag(0))
+		{
+			print("0:stop");
+			set_stop_flag(0,0);
 		}
+		dir=!dir;
+		HAL_Delay(2000);
+//		if (sendFlag) {
+//			DHT_data dhtData = DHT_getData(&dhtSensor);
+//			double temp = max31865ReadTemp(0);
+//			sendFlag = 0;
+//		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

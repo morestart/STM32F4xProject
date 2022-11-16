@@ -128,6 +128,30 @@ STM32F4xProject.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/build
 .PHONY : STM32F4xProject.elf/fast
 
+App/TMC220x/tmc220x.obj: App/TMC220x/tmc220x.c.obj
+.PHONY : App/TMC220x/tmc220x.obj
+
+# target to build an object file
+App/TMC220x/tmc220x.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.obj
+.PHONY : App/TMC220x/tmc220x.c.obj
+
+App/TMC220x/tmc220x.i: App/TMC220x/tmc220x.c.i
+.PHONY : App/TMC220x/tmc220x.i
+
+# target to preprocess a source file
+App/TMC220x/tmc220x.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.i
+.PHONY : App/TMC220x/tmc220x.c.i
+
+App/TMC220x/tmc220x.s: App/TMC220x/tmc220x.c.s
+.PHONY : App/TMC220x/tmc220x.s
+
+# target to generate assembly for a file
+App/TMC220x/tmc220x.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F4xProject.elf.dir\build.make CMakeFiles/STM32F4xProject.elf.dir/App/TMC220x/tmc220x.c.s
+.PHONY : App/TMC220x/tmc220x.c.s
+
 App/TMC220xUart/tmc220xUart.obj: App/TMC220xUart/tmc220xUart.c.obj
 .PHONY : App/TMC220xUart/tmc220xUart.obj
 
@@ -865,6 +889,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... STM32F4xProject.elf
+	@echo ... App/TMC220x/tmc220x.obj
+	@echo ... App/TMC220x/tmc220x.i
+	@echo ... App/TMC220x/tmc220x.s
 	@echo ... App/TMC220xUart/tmc220xUart.obj
 	@echo ... App/TMC220xUart/tmc220xUart.i
 	@echo ... App/TMC220xUart/tmc220xUart.s

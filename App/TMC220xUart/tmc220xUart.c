@@ -1,6 +1,7 @@
 //
 // Created by mores on 2022/11/7.
 //
+#include <string.h>
 #include "tmc220xUart.h"
 #include "stdio.h"
 #include "tools.h"
@@ -8,7 +9,6 @@
 #include "math.h"
 
 TMC2209 tmc2209[TMC220X_NUM];
-
 
 // 顺时针旋转
 uint8_t dir_right[8] = {0x05, 0x00, 0x80, 0x00, 0x00, 0x00, 0x89};
@@ -21,7 +21,7 @@ extern uint8_t USART_RX_BUF[];
 
 uint32_t stepsPerRevolution;
 
-
+extern void UART_clear();
 
 /*!
  * CRC校验
@@ -73,8 +73,12 @@ void uartWriteInt(uint8_t num,unsigned char address, unsigned int value) {
 	writeData[5] = value >> 8;                        // Register Data
 	writeData[6] = value & 0xFF;                      // Register Data
 	calcCrc(writeData, 8);    // Cyclic redundancy check
-
+	HAL_Delay(100);
 	HAL_UART_Transmit(tmc2209[num].uart, (uint8_t *) writeData, 8, 0xff);
+	delay_us(5);
+	HAL_UART_Transmit(&huart6, USART_RX_BUF, 15, 0xff);
+	UART_clear();
+	HAL_Delay(100);
 }
 
 /*!
@@ -84,14 +88,37 @@ void uartWriteInt(uint8_t num,unsigned char address, unsigned int value) {
  */
 void moveStepUart(uint8_t num,uint64_t Step) {
 	uint64_t i;
-	for (i = 0; i < Step; i++) {
-		//发送脉冲
-		HAL_GPIO_WritePin(tmc2209[num].STEP_Port, tmc2209[num].STEP_GPIO_Pin, GPIO_PIN_RESET);
-		delay_us(10);
-		HAL_GPIO_WritePin(tmc2209[num].STEP_Port, tmc2209[num].STEP_GPIO_Pin, GPIO_PIN_SET);
-		delay_us(10);
-		if (tmc2209[num].stop)break;
+	if(tmc2209[num].ZERO_flag){
+		uint16_t  add= TMC_len;
+		for (i = 0; i < Step; i++) {
+			static uint8_t  addc=0;
+			//发送脉冲
+			HAL_GPIO_WritePin(tmc2209[num].STEP_Port, tmc2209[num].STEP_GPIO_Pin, GPIO_PIN_RESET);
+			delay_us(10+add);
+			HAL_GPIO_WritePin(tmc2209[num].STEP_Port, tmc2209[num].STEP_GPIO_Pin, GPIO_PIN_SET);
+			delay_us(10+add);
+			addc++;  //用定时器加效果会更好
+			if((Step-TMC_len*TMC_acc<=i)&&(addc==TMC_acc)){
+				addc=0;
+				add++;
+			}
+			else if((addc==TMC_acc)&&(add>0)){
+				addc=0;
+				add--;
+			}
+
+			if (tmc2209[num].stop)break;
+		}
+	} else{
+		for (i = 0; i < Step; i++) {
+			HAL_GPIO_WritePin(tmc2209[num].STEP_Port, tmc2209[num].STEP_GPIO_Pin, GPIO_PIN_RESET);
+			delay_us(10);
+			HAL_GPIO_WritePin(tmc2209[num].STEP_Port, tmc2209[num].STEP_GPIO_Pin, GPIO_PIN_SET);
+			delay_us(10);
+			if (tmc2209[num].stop)break;
+		}
 	}
+
 }
 
 /*!
@@ -104,7 +131,6 @@ void moveToUART(uint8_t num,uint8_t DIR_Flag, uint32_t moveDistance) {
 	double steps = ((360 * (double) tmc2209[num].div) / tmc2209[num].stepAngle);
 	// 计算需要多少圈才能转到指定位置
 	double nums = ((double) moveDistance / (double) tmc2209[num].minMoveDistance);
-
 	//电机使能
 	startMotor(num);
 	HAL_Delay(10);
@@ -126,8 +152,8 @@ void moveToUART(uint8_t num,uint8_t DIR_Flag, uint32_t moveDistance) {
 	stopMotor(num);
 }
 
-
-uint32_t readReg(uint8_t num,uint8_t regAddr) {
+//55 00 01 46
+uint32_t readReg(uint8_t num,uint8_t regAddr) {  //05 FF 01    00 00 00 00   13       00 00 00
 	uint8_t send[4] = {0x55, 0x00, regAddr};
 	uint32_t cache;
 	calcCrc(send, 4);
@@ -136,6 +162,7 @@ uint32_t readReg(uint8_t num,uint8_t regAddr) {
 	delay_us(5);
 	HAL_UART_Transmit(&huart6, USART_RX_BUF, 15, 0xff);
 	cache = (USART_RX_BUF[7] << 24) + (USART_RX_BUF[8] << 16) + (USART_RX_BUF[9] << 8) + USART_RX_BUF[10];
+	UART_clear();
 	return cache;
 }
 
@@ -197,20 +224,22 @@ void setStepResolutionRegSelect(uint8_t num,uint8_t EN) {
  * @param mres 细分数 256, 128, 64, 32, 16, 8, 4, 2, FULLSTEP
  */
 void setMicrosteppingResolution(uint8_t num,uint8_t mres) {
-	uint32_t msres0 = 1 << 24;
-	uint32_t msres1 = 1 << 25;
-	uint32_t msres2 = 1 << 26;
-	uint32_t msres3 = 1 << 27;
+//	uint32_t msres0 = 1 << 24;
+//	uint32_t msres1 = 1 << 25;
+//	uint32_t msres2 = 1 << 26;
+//	uint32_t msres3 = 1 << 27;
 //	uint32_t intpol = 1 << 28;
 	uint32_t chopconf = readReg(num,0x6c);
-	chopconf = chopconf & (~msres0 | ~msres1 | ~msres2 | ~msres3);
+//	chopconf = chopconf & (~msres0 | ~msres1 | ~msres2 | ~msres3);
+
 	uint32_t msresdezimal = fastLog2(mres);
 	msresdezimal = 8 - msresdezimal;
-	chopconf = (int) chopconf & (int) 4043309055;
+	chopconf = chopconf & 0xF0FFFFFF;
 	chopconf = chopconf | msresdezimal << 24;
 	uartWriteInt(num,0x6c, chopconf);
-	setStepResolutionRegSelect(num,1);
+	setStepResolutionRegSelect(num,0);
 	stepsPerRevolution = 200 * mres;
+	tmc2209[num].div = mres;
 }
 
 /*!
@@ -280,16 +309,31 @@ void initTMC2209(uint8_t num,UART_HandleTypeDef *uart, uint8_t mres,
 	tmc2209[num].minMoveDistance = minMoveDistance;
 	tmc2209[num].DIAG_Port = DIAG_Port;
 	tmc2209[num].DIAG_GPIO_Pin = DIAG_GPIO_Pin;
+	tmc2209[num].ZERO_flag=0;
 
 	clearGSTAT(num);
 	// 细分
 	setMicrosteppingResolution(num,mres);
+//	while (1);
 	// 调整此处 阈值 碰撞
 	stallGuard(num,stallGuardThreshold);
+	tmc2209[num].stop = 0;
 	moveToUART(num,stallGuardDirection, maxDistance);
-//	HAL_Delay(500);
-//	tmc2209[num].stop = 0;
+	HAL_Delay(500);
+	tmc2209[num].ZERO_flag=1;
+	tmc2209[num].stop = 0;
+	clearGSTAT(num);
+	setMicrosteppingResolution(0,32);
+	stallGuard(num,stallGuardThreshold);
 //	stallGuard(60);
+}
+
+void set_stop_flag(uint8_t num,uint8_t flag){
+	tmc2209[num].stop = flag?1:0;
+}
+
+uint8_t get_stop_flag(uint8_t num){
+	return tmc2209[num].stop;
 }
 
 void TMC220X_Callback(uint16_t GPIO_Pin)
@@ -299,7 +343,8 @@ void TMC220X_Callback(uint16_t GPIO_Pin)
 		if(GPIO_Pin== tmc2209[ii].DIAG_GPIO_Pin){
 			tmc2209[ii].stop = 1;
 			stopMotor(ii);
-			tmc2209[ii].stop = 0;
+//			print("P:%x\r\n",GPIO_Pin);
+//			tmc2209[ii].stop = 0;
 		}
 	}
 }

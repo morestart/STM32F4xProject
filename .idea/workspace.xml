@@ -18,64 +18,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d659ef0-4535-4982-9e46-f6b24d1583d4" name="变更" comment="【提交】">
-      <change afterPath="$PROJECT_DIR$/App/TMC220xUart/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/TMC2209Uart/tmc2209Uart.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/TMC2209Uart/tmc2209Uart.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/humidifier/humidifier.c" beforeDir="false" afterPath="$PROJECT_DIR$/App/humidifier/humidifier.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/humidifier/humidifier.h" beforeDir="false" afterPath="$PROJECT_DIR$/App/humidifier/humidifier.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/max31865/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/App/max31865/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.c" beforeDir="false" afterPath="$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.h" beforeDir="false" afterPath="$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/max31865/max31865.c" beforeDir="false" afterPath="$PROJECT_DIR$/App/max31865/max31865.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/max31865/max31865.h" beforeDir="false" afterPath="$PROJECT_DIR$/App/max31865/max31865.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/motor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/App/TMC220x/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/motor/motor.c" beforeDir="false" afterPath="$PROJECT_DIR$/App/TMC220x/tmc220x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/motor/motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/App/TMC220x/tmc220x.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists_template.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists_template.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_it.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/usart.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/usart.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/tim.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/tim.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/usart.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/STM32F4xProject.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/STM32F4xProject.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-4e0984b44f90179ff566.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-5968857be1ba39ab0e41.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7f89a2abc74e84ae93ec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-12T09-54-34-0418.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-STM32F4xProject.elf-Debug-2131c724e298d15d38b5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/TMC2209Uart/tmc2209Uart.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/humidifier/humidifier.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/max31865/max31865.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/App/motor/motor.c.obj.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/gpio.c.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/main.c.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/stm32f4xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/stm32f4xx_it.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/tim.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/tim.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/tim.c.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/STM32F4xProject.elf.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/STM32F4xProject.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/STM32F4xProject.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/STM32F4xProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/STM32F4xProject.cbp" afterDir="false" />
@@ -211,7 +181,10 @@
       <workItem from="1668326003257" duration="47000" />
       <workItem from="1668344926124" duration="457000" />
       <workItem from="1668417896591" duration="6419000" />
-      <workItem from="1668477655041" duration="2286000" />
+      <workItem from="1668477655041" duration="11669000" />
+      <workItem from="1668575339083" duration="736000" />
+      <workItem from="1668582937200" duration="601000" />
+      <workItem from="1668590791797" duration="13081000" />
     </task>
     <task id="LOCAL-00001" summary="【提交】">
       <created>1668302527466</created>
@@ -220,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668302527466</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="【提交】">
+      <created>1668480059434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668480059434</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,5 +220,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="【提交】" />
     <option name="LAST_COMMIT_MESSAGE" value="【提交】" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
+          <line>210</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/App/TMC220xUart/tmc220xUart.c</url>
+          <line>75</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
+        <watch expression="tmc2209" />
+        <watch expression="temp" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

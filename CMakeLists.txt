@@ -49,11 +49,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include App/motor App/tools App/humidifier App/max31865 App/TMC220xUart App/dht)
+include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include App/motor App/tools App/humidifier App/max31865 App/TMC220xUart App/dht APP/TMC220x)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*" App/motor/*.* App/tools/*.* App/humidifier/*.* App/max31865/*.* App/TMC220xUart/*.* App/dht/*.*)
+file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*" App/motor/*.* App/tools/*.* App/humidifier/*.* App/max31865/*.* App/TMC220xUart/*.* App/dht/*.* App/TMC220x/*.*)
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407VETX_FLASH.ld)
 
