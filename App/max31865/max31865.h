@@ -22,7 +22,7 @@
 
 
 /********************* Constants *********************/
-#define RREF 430                        // Reference resistor
+#define RREF 430                        // Reference resistor if use pt1000 change RREF to 4300
 #define FACTOR 32768                    // 2^15 used for data to resistance conversion
 #define ALPHA 0.003851                  // PT-100 temperature coefficient
 

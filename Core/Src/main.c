@@ -105,10 +105,10 @@ int main(void)
 	// 初始化步进电机驱动
 	RetargetInit(&huart6);
 	initTMC2209(
-		0, &huart2, 64, 203, 2,
+		0, &huart2, 64, 253, 2,
 		STEP1_GPIO_Port, STEP1_Pin,
 		EN1_GPIO_Port, EN1_Pin,
-		DIAG2_GPIO_Port, DIAG2_Pin, 80, 1
+		DIAG2_GPIO_Port, DIAG2_Pin, 90, 0
 	);
 //
 //	initTMC2209(1, &huart3, 64, 203, 2, STEP2_GPIO_Port,
@@ -127,17 +127,21 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
 	stallGuard(0,0);
+	moveToUART(0, 1, 37);
 	while (1) {
-		static uint8_t dir=0;
-		moveToUART(0, dir, 200);
-		if(get_stop_flag(0))
-		{
-			print("0:stop");
-			set_stop_flag(0,0);
-		}
-		dir=!dir;
+		moveToUART(0, 1, 25);
 		HAL_Delay(2000);
+//		static uint8_t dir=0;
+//		moveToUART(0, dir, 253);
+//		if(get_stop_flag(0))
+//		{
+//			print("0:stop");
+//			set_stop_flag(0,0);
+//		}
+//		dir=!dir;
+//		HAL_Delay(2000);
 //		if (sendFlag) {
 //			DHT_data dhtData = DHT_getData(&dhtSensor);
 //			double temp = max31865ReadTemp(0);
@@ -209,6 +213,7 @@ void Error_Handler(void)
 	/* User can add his own implementation to report the HAL error return state */
 	__disable_irq();
 	while (1) {
+
 	}
   /* USER CODE END Error_Handler_Debug */
 }
